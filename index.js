@@ -28,13 +28,13 @@ ref.on("value", function (snapshot) {
 
 //Scheduled tweet
 new CronJob('* * * * *', function () {
-  console.log('Starting auto tweet.......')
   let failedTweet = []
 
   const newDate = new Date()
   const hour = newDate.getHours('en-ID', { timezone: 'Asia/Jakarta' })
   const minute = newDate.getMinutes('en-ID', { timezone: 'Asia/Jakarta' })
   const time = `${hour}:${minute}`
+  console.log('Starting auto tweet....... @' + time)
 
   for (let i = 0; i < tweetData.scheduledTweet.length; i++) {
     if (tweetData.scheduledTweet[i].time == time) {
