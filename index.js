@@ -31,8 +31,8 @@ new CronJob('* * * * *', function () {
   let failedTweet = []
 
   const newDate = new Date()
-  const hour = newDate.getHours('en-ID', { timezone: 'Asia/Jakarta' })
-  const minute = newDate.getMinutes('en-ID', { timezone: 'Asia/Jakarta' })
+  const hour = newDate.getHours('en-US', { timezone: 'Asia/Jakarta' })
+  const minute = newDate.getMinutes('en-US', { timezone: 'Asia/Jakarta' })
   const time = `${hour}:${minute}`
   console.log('Starting auto tweet....... @' + time)
 
